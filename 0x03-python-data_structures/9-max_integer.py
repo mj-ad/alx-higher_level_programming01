@@ -7,4 +7,3 @@ def max_integer(my_list=[]):
         my_list.sort()
         max_value = my_list[c]
         return max_value
-    
