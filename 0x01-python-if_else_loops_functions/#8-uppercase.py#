@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+def uppercase(str):
+    u = 0
+    for letter in str:
+        if ord(letter) >= ord('a') and ord(letter) <= ord('z'):
+            u = 32
+        else:
+            u = 0
+        print('{:c}'.format(ord(letter) - u, end=''))
+    print()
