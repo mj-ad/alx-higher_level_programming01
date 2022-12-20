@@ -11,6 +11,8 @@ def safe_print_list_integers(my_list=[], x=0):
             except (ValueError, TypeError):
                 continue
     else:
-        raise IndexError
+        for i in range(x):
+            int(my_list[i]) == my_list[i]
+            print('{:d}'.format(my_list[i]), end='')
     print()
     return count
