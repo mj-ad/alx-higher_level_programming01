@@ -39,9 +39,9 @@ class Rectangle:
     def perimeter(self):
         if self.__width == 0:
             self.__height = 0
-            if self.__height == 0:
-                self.__width = 0
-                return ((2 * self.__width) + (2 * self.__height))
+        if self.__height == 0:
+            self.__width = 0
+        return ((2 * self.__width) + (2 * self.__height))
 
     def __str__(self):
         d = ''
