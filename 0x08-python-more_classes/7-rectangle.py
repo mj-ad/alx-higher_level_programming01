@@ -53,7 +53,7 @@ class Rectangle:
         if a != 0 and b != 0:
             for i in range(0, b):
                 d += str(self.print_symbol) * a
-                if i < b:
+                if i < b - 1:
                     d += '\n'
             return d
         return d
