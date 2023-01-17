@@ -11,18 +11,18 @@ Usage
 
 Import the class:
 
-       >>>BaseGeometry = __import__('7-base_geometry').BaseGeometry
+       >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 ::
 
-	>>>bg = BaseGeometry()
-	>>>bg.integer_validator("my_int", 12)
-	>>>bg.integer_validator("width", 89)
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 12)
+	>>> bg.integer_validator("width", 89)
 	>>> bg.integer_validator("Big", 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
 
 ::
 
-	>>>bg.area()
+	>>> bg.area()
 	Traceback (most recent call last):
 	Exception: area() is not implemented
 
@@ -30,7 +30,7 @@ When a string is passed to the argument value an exception is raised
 
 ::
 
-	>>>bg.integer_validator("name", "John")
+	>>> bg.integer_validator("name", "John")
 	Traceback (most recent call last):
 	TypeError: name must be an integer
 
@@ -67,8 +67,8 @@ When only one or no argument is passed an exception occurs
 	 TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 	 >>> bg.integer_validator()
-	Traceback (most recent call last):
-	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+	 Traceback (most recent call last):
+	 TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
 When a list, tuple or anything other than an integer is passed an error is raised
 
