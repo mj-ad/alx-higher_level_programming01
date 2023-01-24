@@ -6,6 +6,5 @@ import json
 def load_from_json_file(filename):
     """ creates an Object from a “JSON file” """
 
-    with open(filename, encoding='utf-8') as f:
-        for line in filename:
-            return json.loads(line)
+    with open(filename, 'w', encoding='utf-8') as f:
+        return json.loads(filename)
