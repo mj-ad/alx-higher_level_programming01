@@ -8,7 +8,7 @@ class TestRectangle(unittest.TestCase):
 
     def test_two_arg(self):
         r1 = Rectangle(10, 2)
-        r2 = Rectangle(8, 9)
+        r2 = Rectangle(2, 10)
         self.assertEqual(r1.id, r2.id - 1)
 
     def test_id_after_unique_id(self):
@@ -19,3 +19,46 @@ class TestRectangle(unittest.TestCase):
 
     def test_unique_id(self):
         self.assertEqual(7, Rectangle(10, 2, 0, 0, 7).id)
+
+    def testtwo_arg(self):
+        self.assertEqual(2, Rectangle(10, 2).height)
+
+    def test_three_arg(self):
+        r1 = Rectangle(10, 2, 9)
+        self.assertEqual(10, r1.width)
+
+    def test_four_arg(self):
+        self.assertEqual(0, Rectangle(10, 2, 0, 0).x)
+
+    def test_string_arg(self):
+        self.assertEqual('1', Rectangle('1', 2).width)
+
+    def test_second_string_arg(self):
+        self.assertEqual('2', Rectangle(1, '2').height)
+
+    def test_third_string_arg(self):
+        self.assertEqual('3', Rectangle(1, 2, '3').x)
+
+    def test_fourth_string_arg(self):
+        self.assertEqual('4', Rectangle(1, 2, 3, '4').y)
+
+    def test_negative_width(self):
+        self.assertEqual(-1, Rectangle(-1, 2).width)
+
+    def test_negative_height(self):
+        self.assertEqual(-2, Rectangle(1, -2).height)
+
+    def test_zero_height(self):
+        self.assertEqual(0, Rectangle(1, 0).height)
+
+    def test_zero_width(self):
+        self.assertEqual(0, Rectangle(0, 2).width)
+
+    def test_negative_x(self):
+        self.assertEqual(-3, Rectangle(1, 2, -3).x)
+
+    def test_negative_y(self):
+        self.assertEqual(-4, Rectangle(1, 2, 3, -4).y)
+
+if __name__ == "__main__":
+    unittest.main()
