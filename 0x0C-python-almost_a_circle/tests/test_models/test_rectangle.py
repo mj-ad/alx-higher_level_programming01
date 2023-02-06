@@ -73,5 +73,18 @@ class Test_Rectangle_Validation(unittest.TestCase):
         with self.assertRaises(ValueError):
             print(-4, Rectangle(1, 2, 3, -4).y)
 
+class Test_Rectangle_Area(unittest.TestCase):
+    """ testing area method """
+
+    def test_area(self):
+        r = Rectangle(5, 12, 0, 0, 0)
+        self.assertEqual(60, r.area())
+
+    def test_changed_width_and_height(self):
+        r = Rectangle(5, 12, 0, 0, 0)
+        r.width = 7
+        r.height = 3
+        self.assertEqual(21, r.area())
+
 if __name__ == "__main__":
     unittest.main()
