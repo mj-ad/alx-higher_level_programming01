@@ -1,0 +1,2 @@
+-- lists rowsof a table
+SELECT ROWS FROM first_table;
