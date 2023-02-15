@@ -1,0 +1,5 @@
+-- computes the score average of all records in the table'
+MySQL ALTER TABLE second_table IF NOT EXISTS ADD average FLOAT
+update second_table
+set average = (select avg(score)
+                 from second_table)
