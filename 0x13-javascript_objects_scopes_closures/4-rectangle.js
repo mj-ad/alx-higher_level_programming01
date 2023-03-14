@@ -11,10 +11,21 @@ module.exports = class Rectangle {
     let str = '';
     for (let i = 0; i < this.height; i++) {
       for (let j = 0; j < this.width; j++) {
-	str += 'X';
+        str += 'X';
       }
       console.log(str);
-      str = ''
+      str = '';
     }
   }
-}
+
+  rotate () {
+    const temp = this.width;
+    this.width = this.height;
+    this.height = temp;
+  }
+
+  double () {
+    this.width = this.width * 2;
+    this.height = this.height * 2;
+  }
+};
