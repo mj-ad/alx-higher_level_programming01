@@ -8,5 +8,5 @@ if __name__ == '__main__':
     dbname = argv[3]
     con = MySQLdb.connect(user=username, passwd=password, db=dbname)
     cur = con.cursor()
-    cur.execute("SELECT * FROM states")
+    cur.execute("SELECT * FROM `states`")
     [print(state) for state in cur.fetchall()]
