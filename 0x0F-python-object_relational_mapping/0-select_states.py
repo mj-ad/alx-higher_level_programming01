@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#list all states in hbth_0e_0_usa in ascending order
+# list all states in hbth_0e_0_usa in ascending order
 from sys import argv
 import MySQLdb
 if __name__ == '__main__':
