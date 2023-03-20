@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-# list all states in hbth_0e_0_usa in ascending order
-# file = 0-select_states.py
-# usage - ./0-select_states.py username
-#                              password
-#                              database
+"""
+list all states in hbth_0e_0_usa in ascending order
+file = 0-select_states.py
+usage - ./0-select_states.py username password database
+"""
 from sys import argv
 import MySQLdb
 if __name__ == '__main__':
