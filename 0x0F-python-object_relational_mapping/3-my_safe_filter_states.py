@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""safely filters the table against sql injections"""
+"""
+safely filters the table against sql injections
+"""
 from sys import argv
 import MySQLdb
 if __name__ == '__main__':
